@@ -3,6 +3,7 @@ import express from 'express'
 import accountRouter from './routes/account-routes.js'
 import customerRouter from './routes/customer-routes.js'
 import eventRouter from './routes/event-routes.js'
+import registrationRouter from './routes/registration-routes.js'
 
 init_db()
 
@@ -12,6 +13,7 @@ app.use(express.json())
 app.use('/api/accounts', accountRouter)
 app.use('/api/customers', customerRouter)
 app.use('/api/events', eventRouter)
+app.use('/api/registration', registrationRouter)
 
 app.listen('8000');
 
