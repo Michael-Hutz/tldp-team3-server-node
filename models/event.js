@@ -5,7 +5,11 @@ const sequence = s(mongoose)
 const { Schema, model } = mongoose
 
 const eventSchema = new Schema({
-  EVENT_ID: Number
+  EVENT_ID: Number,
+  EVENT_CODE: String,
+  TITLE: String,
+  DESCRIPTION: String
+
 
 })
 

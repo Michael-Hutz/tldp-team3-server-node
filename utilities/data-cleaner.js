@@ -17,7 +17,24 @@ const dataCleaner = {
       results.push(dataCleaner.cleanCustomer(customers[c]))
     }
     return results
-  }
+  },
+
+  cleanEvent: ( event ) => {
+    return {
+      id: event.EVENT_ID,
+      code: event.EVENT_CODE,
+      title: event.TITLE,
+      description: event.DESCRIPTION 
+    }
+  },
+
+  cleanEvents: ( events ) => {
+    var results = []
+    for( const e in events) {
+      results.push(dataCleaner.cleanEvent(events[e]))
+    }
+    return results
+  },
 
 }
 

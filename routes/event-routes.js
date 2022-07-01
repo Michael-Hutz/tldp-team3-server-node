@@ -4,6 +4,7 @@ import eventController from '../controllers/event-controller.js'
 
 // GET /api/events
 eventRouter.get('/', function(req, res) {
+    console.log("Get All Events")
     eventController.getAllEvents(req, res)
 })
 // GET /api/events/:event_id
@@ -18,3 +19,5 @@ eventRouter.post('/', function(req, res) {
 eventRouter.delete('/:event_id', function(req, res) {
     eventController.deleteEventByID(req, res)
   })
+
+  export default eventRouter
