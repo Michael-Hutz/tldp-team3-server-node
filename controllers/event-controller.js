@@ -34,6 +34,16 @@ const eventController = {
           () => res.sendStatus(500) // Error
         )
       },
+
+    deleteEventByID: function(req, res) {
+        Event.deleteOne({'EVENT_ID': req.params.event_id}, function(err){
+          if(err) {
+            res.sendStatus(500)
+          } else {
+            res.sendStatus(200)
+          }
+        })
+      }
 }
 
 export default eventController
