@@ -4,12 +4,12 @@ import registrationController from '../controllers/registration-controller.js'
 
 // GET /api/registrations
 registrationRouter.get('/', function(req, res) {
-    registrationController.getAllRegistrations(req, res)
+    registrationController.getAllRegistration(req, res)
 })
 
 // GET /api/registrations/:registrationID
 registrationRouter.get('/:registrationID', function(req, res) {
-    registrationController.getRegistraionByID(req, res)
+    registrationController.getRegistrationByID(req, res)
 })
 // POST /api/registrations
 registrationRouter.post('/', function(req, res) {

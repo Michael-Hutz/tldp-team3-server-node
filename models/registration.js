@@ -8,7 +8,7 @@ const registrationSchema = new Schema({
   REGISTRATION_ID: Number,
   CUSTOMER_ID: Number,
   EVENT_ID: Number,
-  DATE: String,
+  DATE: Date,
   NOTE: String
 })
 
