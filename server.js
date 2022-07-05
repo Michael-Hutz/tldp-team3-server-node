@@ -13,7 +13,7 @@ app.use(express.json())
 app.use('/api/accounts', accountRouter)
 app.use('/api/customers', customerRouter)
 app.use('/api/events', eventRouter)
-app.use('/api/registration', registrationRouter)
+app.use('/api/registrations', registrationRouter)
 
 app.listen('8000');
 

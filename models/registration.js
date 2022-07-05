@@ -1,0 +1,18 @@
+import mongoose from 'mongoose'
+import s from 'mongoose-sequence'
+const sequence = s(mongoose)
+
+const { Schema, model } = mongoose
+
+const registrationSchema = new Schema({
+  REGISTRATION_ID: Number,
+  CUSTOMER_ID: Number,
+  EVENT_ID: Number,
+  DATE: String,
+  NOTE: String
+})
+
+registrationSchema.plugin(sequence, {inc_field: 'REGISTRATION_ID'}) 
+
+const Registration = model('Registration', registrationSchema )
+export default Registration

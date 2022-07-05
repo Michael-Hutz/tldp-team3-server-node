@@ -21,7 +21,7 @@ const dataCleaner = {
 
   cleanEvent: ( event ) => {
     return {
-      id: event.EVENT_ID,
+      event_id: event.EVENT_ID,
       code: event.EVENT_CODE,
       title: event.TITLE,
       description: event.DESCRIPTION 
@@ -35,6 +35,24 @@ const dataCleaner = {
     }
     return results
   },
+
+  cleanRegistration: ( registration ) => {
+    return {
+      id: registration.REGISTRATION_ID,
+      customer_id : registration.CUSTOMER_ID,
+      event_id: registration.EVENT_ID,
+      registration_date: registration.DATE,
+      notes: registration.NOTE 
+    }
+  },
+
+  cleanRegistrations: ( registrations ) => {
+    var results = []
+    for( const r in registrations) {
+      results.push(dataCleaner.cleanRegistration(registrations[r]))
+    }
+    return results
+  }
 
 }
 

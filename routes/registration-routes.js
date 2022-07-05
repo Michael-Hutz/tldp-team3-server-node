@@ -1,6 +1,6 @@
 import express from 'express'
 var registrationRouter = express.Router()
-import eventController from '../controllers/registration-controller.js'
+import registrationController from '../controllers/registration-controller.js'
 
 // GET /api/registrations
 registrationRouter.get('/', function(req, res) {
@@ -11,7 +11,7 @@ registrationRouter.get('/', function(req, res) {
 registrationRouter.get('/:registrationID', function(req, res) {
     registrationController.getRegistraionByID(req, res)
 })
-// POST /api/registration
+// POST /api/registrations
 registrationRouter.post('/', function(req, res) {
     registrationController.postRegistration(req, res)
 })
