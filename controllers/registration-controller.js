@@ -26,7 +26,7 @@ const registrationController = {
       },
 
     postRegistration: function(req, res) {
-        Registration.create({ REGISTRATION_ID: req.body.id, CUSTOMER_ID: req.body.customer_id, EVENT_ID: req.body.event_id, DATE: req.body.registration_date, NOTE: req.body.notes}).then(
+        Registration.create({ REGISTRATION_ID: req.body.id, CUSTOMER_ID: req.body.customer_id, EVENT_ID: req.body.event_id, REGISTRATION_DATE: req.body.registration_date, NOTES: req.body.notes}).then(
           (r) => { 
             res.location(`/api/registrations/${r.REGISTRATION_ID}`)
             res.sendStatus(201)

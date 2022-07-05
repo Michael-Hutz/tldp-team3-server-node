@@ -41,8 +41,8 @@ const dataCleaner = {
       id: registration.REGISTRATION_ID,
       customer_id : registration.CUSTOMER_ID,
       event_id: registration.EVENT_ID,
-      registration_date: registration.DATE,
-      notes: registration.NOTE 
+      registration_date: registration.REGISTRATION_DATE,
+      notes: registration.NOTES 
     }
   },
 

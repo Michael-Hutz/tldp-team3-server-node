@@ -8,8 +8,8 @@ const registrationSchema = new Schema({
   REGISTRATION_ID: Number,
   CUSTOMER_ID: Number,
   EVENT_ID: Number,
-  DATE: Date,
-  NOTE: String
+  REGISTRATION_DATE: Date,
+  NOTES: String
 })
 
 registrationSchema.plugin(sequence, {inc_field: 'REGISTRATION_ID'}) 
